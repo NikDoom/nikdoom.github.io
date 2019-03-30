@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, =initial-scale=1">
+	<title>Fashion</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+	<div class="container">
+		<div class="slider js_slider">
+			<div class="frame js_frame container-slides">
+        <ul class="slides js_slides ">
+          <li class="js_slide container-slide_1 container-slide"></li>
+          <li class="js_slide container-slide_2 container-slide"></li>
+          <li class="js_slide container-slide_3 container-slide"></li>
+        </ul>
+	    </div>
+	    <div class="container-arrow">
+				<span id="arrow-left" class="container-arrow-item container-arrow-item_left js_prev prev"></span>
+				<span id="arrow-right" class="container-arrow-item container-arrow-item_right js_next next"></span>
+			</div>
+			<!-- /.arrows -->
+	  </div>
+		<svg id="container-svg_circle" class="container-svg container-svg_circle">
+			<defs>
+				<linearGradient id="orange" x1="99.863%" x2="0%" y1="5.234%" y2="0%">
+				  <stop offset="0%" stop-color="rgb(238,39,0)" stop-opacity="1" />
+				  <stop offset="100%" stop-color="rgb(255,142,25)" stop-opacity="1" />
+				</linearGradient>
+			</defs>
+			<circle id="circle" cx="91.4%" cy="10.6%" r="83.7%" fill="url(#orange)" />
+		</svg>
+		<svg class="container-svg container-svg_group">
+			<defs>
+				<linearGradient id="pink" x1="0%" x2="51.504%" y1="85.717%" y2="0%">
+				  <stop offset="0%" stop-color="rgb(237,79,144)" stop-opacity="1" />
+				  <stop offset="100%" stop-color="rgb(255,86,142)" stop-opacity="1" />
+				</linearGradient>
+				<linearGradient id="yellow" x1="20.791%" x2="0%" y1="97.815%" y2="0%">
+				  <stop offset="0%" stop-color="rgb(255,155,0)" stop-opacity="1" />
+				  <stop offset="100%" stop-color="rgb(255,239,81)" stop-opacity="1" />
+				</linearGradient>
+				<linearGradient id="blue" x1="0%" x2="79.864%" y1="60.182%" y2="0%">
+				  <stop offset="0%" stop-color="rgb(2,156,210)" stop-opacity="1" />
+				  <stop offset="100%" stop-color="rgb(0,216,255)" stop-opacity="1" />
+				</linearGradient>
+			</defs>
+				<rect width="100%" height="50%" fill="url(#pink)" class="triangle_up" />
+				<rect width="100%" class="triangle_bottom" height="50%" fill="url(#blue)" />
+				<circle cx="3.5%" cy="52.2%" r="14.3%" fill="url(#yellow)" />
+		</svg>
+		<img src="images/goodDesignLogo.png" alt="Good Design" width="13.385%" class="container-logo">
+		<ul class="container-list">
+			<li class="container-list-item"><a class="container-list-item_link" href="#">Store</a></li>
+			<!-- /.container-list-item -->
+			<li class="container-list-item"><a class="container-list-item_link" href="#">Blog</a></li>
+			<!-- /.container-list-item -->
+			<li class="container-list-item"><a class="container-list-item_link" href="#">Contact</a></li>
+			<!-- /.container-list-item -->
+		</ul>
+		<!-- /.container-list -->
+		<button class="container-reg">Register</button>
+		<a id="hamburger-icon" href="#" title="Menu">
+		  <span class="line line-1"></span>
+		  <span class="line line-2"></span>
+		  <span class="line line-3"></span>
+		</a>
+		<h2 class="container-title"><span id="season">Summer</span><br>Collection<span class="container-title_small">2018 →</span></h2>
+		<!-- /.container-title -->
+		<div class="container-info">
+			<p class="container-info-moto">Fashion is the armor,<br>to survive the reality of life.</p>
+			<!-- /.container-info-moto -->
+			<div class="container-info-media">
+				<a href="#" class="container-info-media-link"><img src="images/facebook.png" width="60px" height="60px" alt="facebook"></a>
+				<a href="#" class="container-info-media-link"><img src="images/twitter.png" width="60px" height="60px" alt="twitter"></a>
+				<a href="#" class="container-info-media-link"><img src="images/insta.png" width="60px" height="60px" alt="instagram"></a>
+			</div>
+			<!-- /.container-info-media -->
+		</div>
+		<!-- /.container-info -->
+	</div>
+	<!-- /.container -->
+	<div class="login" id="login">
+	  <form class="login-form" action="javascript:void(0);" method="get">
+      <fieldset class="clearfix">
+        <p><span></span><input type="text" placeholder="Username" required></p>
+        <p><span></span><input type="password" placeholder="Password" required></p>
+        <p><input type="submit" value="ВОЙТИ"></p>
+      </fieldset>
+	  </form>
+	  <p>Нет аккаунта? &nbsp;&nbsp;<a class="login-form-reg" href="#">Регистрация</a><span>→</span></p>
+    </div>
+	<script src="js/lory.min.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

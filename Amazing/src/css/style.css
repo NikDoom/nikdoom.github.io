@@ -1,0 +1,24 @@
+.main {
+  background: url("../img/heroimage.png") no-repeat blue;
+  padding-top: 88px;
+}
+
+.main-header-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+}
