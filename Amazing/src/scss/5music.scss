@@ -1,0 +1,55 @@
+.music {
+	z-index: 1;
+	height: 900px;
+	box-sizing: border-box;
+	background: url(../img/dj.png) no-repeat center;
+	background-size: cover;
+	&_space {
+		background-color: #282b2f;
+		z-index: 10;
+		width: 100%;
+		height: 900px;
+		box-sizing: border-box;
+		position: absolute;
+		left: -84%;
+	}
+	&-text {
+		position: relative;
+		width: 33.8%;
+		display: inline-block;
+		background-color: #212227;
+		color: #fff;
+		padding: 135px 58px 96px;
+		left: 16%;
+		&_title {
+			text-transform: uppercase;
+			color: #2db356;
+			font-size: 1.5em;
+			line-height: 2.25rem;
+			margin: 0;
+			&__small {
+				margin: 0;
+				color: #2db356;
+				line-height: 2.25rem;
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+		}
+		&_description {
+			margin: 35px 0 45px;
+			font-size: 0.874em;
+			line-height: 1.3125rem;
+		}
+		&_link:hover {
+			background-color: #2db356;
+			color: #212227;
+			box-shadow: 0 0 25px 2px #2db356;
+		}
+	}
+}
+
+@media (max-width: 1179px) {
+	.music-text {
+		margin-left: -10px;
+	}
+}

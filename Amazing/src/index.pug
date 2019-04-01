@@ -3,6 +3,8 @@ html(lang="en")
 head
 	meta(charset="UTF-8")
 	title Document
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	link(rel="stylesheet", href="css/normalize.css")
 	link(rel="stylesheet", href="css/style.css")
 body
 	main.main
@@ -18,5 +20,43 @@ body
 							<span class="line line-3"></span>
 							<span class="hamburger-title">Menu</span>
 						</a>
-				h2.main-header_title Amazing Dude.<br>Amazing Life.
+				h1.main-header_title Amazing Dude.<br>Amazing Life.
 				p.main-header_text Welcome to the personal site of <b>John Doe</b>. A professional skier and musician.
+	section.info
+		.info_img
+			img(src="img/PHOTO.png", alt="John Doe on a ski" width="100%" height="auto")
+		.info-text
+			.info-text_wrap
+				h2.info-text_title Sed faucibus quis
+				p.info-text_description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo blanditiis vel reiciendis accusamus nostrum, hic distinctio dolores magnam!
+	section.photos
+		img.photos-item(src="img/photo1.png", alt="rope road" width="25%" height="")
+		img.photos-item(src="img/photo2.png", alt="skier" width="25%" height="")
+		img.photos-item(src="img/photo3.png", alt="ski shoe" width="25%" height="")
+		img.photos-item(src="img/photo4.png", alt="mountain" width="25%" height="")
+	section.instagram
+		.wrap
+			.instagram-text
+				h2.instagram-text_title Instagram
+				p.instagram-text_description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur veritatis expedita libero.
+				a.instagram-text_link.button(href="#") View on instagram
+			.instagram-image
+				img.instagram-image_img(src="img/skies.png", alt="skies" width="68%" max-width="590px" height="")
+	section.music
+		.wrap
+			.music_space
+			.music-text
+				h2.music-text_title Self-Effacing Rage
+				h3.music-text_title__small FT. Fascinating Collision
+				p.music-text_description Director: James G. Rohrer<br>Production Company: Sycamore<br>Producer: Laura C. Carton<br>Executive Producer: Jack M. Heckart
+				a.music-text_link.button.button__green(href="#") Click To Play ►
+	section.call
+		.wrap
+			.call__spotify.call-item
+				h3.call-item_title Spotify
+				p.call-item_text Follow me, stream and add  my songs to your Spotify playlist.
+				a(href="#").call-item_link.button Follow On Spotify
+			.call__itunes.call-item
+				h3.call-item_title Itunes
+				p.call-item_text Buy and download my songs from iTunes.
+				a(href="#").call-item_link.button.call-item_link__black Follow On Itunes

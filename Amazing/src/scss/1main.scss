@@ -1,0 +1,39 @@
+.main {
+	background: url(../img/heroimage.png) no-repeat #42aaff;
+	background-size: cover;
+	background-position: right bottom;
+	padding-top: 88px;
+	&-header {
+		padding-bottom: 16.875rem;
+		&-list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			&-item {
+				display: block;
+				&_logo {
+					height: 80px;
+					cursor: pointer;
+				}
+				&-menu {
+					padding: 0 28px;
+					text-align: center;
+					color: #000;
+				}
+			}
+		}
+		&_title {
+			font-size: 4.5em;
+			margin: 12rem 0 3rem 0;
+			font-weight: normal;
+		}
+		&_text {
+			font-size: 1.875em;
+			line-height: 2.8rem;
+			font-weight: 300;
+			max-width: 580px;
+			width: 50%;
+		}
+	}
+}
