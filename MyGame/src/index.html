@@ -6,7 +6,13 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="wrap">
+	<div class="name-wrap" id="nameWrap">
+		<form id="nameForm" class="name-form">
+			<input type="text" class="name-form_input" placeholder="Write Your Name" id="nameInput">
+			<input type="submit" class="name-form_submit" id="nameBtn">
+		</form>
+	</div>
+	<div class="wrap" id="wrap">
 		<h1 class="title">Are You Ready to Play?</h1>
 		<table class="game">
 			<tr class="game-row">
@@ -43,10 +49,11 @@
 			</tr>
 		</table>
 		<div class="player">
-			<div class="player-name" id="name">Vaacya</div>
-			<div class="player-score" id="score">0</div>
+			<p id="playerName">Player</p>
+			<p class="player-score" id="playerScore">0</p>
 		</div>
 	</div>
+	<script src="js/name.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
