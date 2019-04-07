@@ -1,0 +1,42 @@
+.wrap {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1280px;
+}
+.title {
+	text-align: center;
+	text-transform: uppercase;
+}
+.game {
+	box-sizing: border-box;
+	border-collapse: collapse;
+	border: 20px solid #1a153f;
+	background: linear-gradient(109deg, #010257 0%, #425BFF 17%, #112780 32%, #475280 42%, #4A5580 52%, #2A1F80 66%, #412BFF 82%, #140180 98%, #140180 100%); /* ff3.6+ */
+	color: #fff;
+	font-size: 2em;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 20px;
+	&-item {
+		box-sizing: border-box;
+		border: 3px solid #fff;
+		padding: 25px 5px;
+		text-align: center;
+		&_title {
+
+		}
+		&_cell {
+			cursor: pointer;
+			&:hover {
+				background-color: #222;
+			}
+		}
+	}
+}
+.player {
+	display: flex;
+	justify-content: space-between;
+	font-size: 2em;
+	font-weight: bold;
+	border: 20px solid transparent;
+}
