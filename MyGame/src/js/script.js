@@ -1,20 +1,30 @@
-var themes = ["тема 1", "тема 2", "тема 3", "тема 4", "тема 5", "тема 6"];
+var themes = [theme1.title, theme2.title, theme3.title, theme4.title, theme5.title, theme6.title];
 
 function compareRandom(a, b) {
   return Math.random() - 0.5;
-}
+};
 
 themes.sort(compareRandom);
 
-console.log(themes);
 
 let titles = document.getElementsByClassName('game-item_title');
 let row = document.getElementsByClassName('game-row');
 let cell = document.getElementsByClassName('game-item_cell');
+let playerScore = document.getElementById('playerScore');
 
-titles[0].textContent = themes[0];
-titles[1].textContent = themes[1];
-titles[2].textContent = themes[2];
-titles[3].textContent = themes[3];
+for (var i = 0; i < titles.length; i++) {
+	titles[i].textContent = themes[i];
+}
 
-console.log(typeof(cell[0].textContent));
+for (var i = 0; i < cell.length; i++) {
+	cell[i].onclick = function() {
+		let point = this.textContent;
+		point = parseInt(point);
+		let result = prompt();
+		if (true) {
+			let playerScoreCurrent = playerScore.textContent;
+			let playerScoreNumber = parseInt(playerScoreCurrent) + point;
+			playerScore.textContent = playerScoreNumber;
+		}
+	}
+}

@@ -14,4 +14,4 @@ nameForm.onsubmit = function() {
 	nameWrap.style.display = "none";
 	wrap.style.display = "block";
 	return false
-}
+};

@@ -32,6 +32,8 @@
 .title {
 	text-align: center;
 	text-transform: uppercase;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 .game {
 	box-sizing: border-box;
@@ -49,10 +51,11 @@
 		padding: 25px 5px;
 		text-align: center;
 		&_title {
-
+		
 		}
 		&_cell {
 			cursor: pointer;
+			user-select: none;
 			&:hover {
 				background-color: #222;
 			}
@@ -62,7 +65,11 @@
 .player {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	font-size: 2em;
 	font-weight: bold;
 	border: 20px solid transparent;
+	p {
+		margin: 0;
+	}
 }
