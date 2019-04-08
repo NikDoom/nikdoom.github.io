@@ -33,7 +33,7 @@ function getFinal() {
 	let playerScoreText = playerScore.textContent;
 	wrap.style.display = "none";
 	final.style.display = "flex";
-	finalTitle.textContent = 'Game over. ' + playerNameText + ', your final score is ' + playerScoreText;
+	finalTitle.textContent = 'Game over. ' + playerNameText + ', your final score: ' + playerScoreText +'.';
 }
 
 for (let i = 0; i < cells.length; i++) {
@@ -42,16 +42,20 @@ for (let i = 0; i < cells.length; i++) {
 		point = parseInt(point);
 		let playerScoreNumber;
 		let playerScoreCurrent = playerScore.textContent;
-		let result = prompt(this.getElementsByClassName('hiden-quest')[0].textContent);
+		let  playerWrote= prompt(this.getElementsByClassName('hiden-quest')[0].textContent);
+		let result = playerWrote.toLowerCase();
 		cells[i].classList.add("wasted");
-		if ( result == this.getElementsByClassName('hiden-answer')[0].textContent) {
+		let rightAnswer = this.getElementsByClassName('hiden-answer')[0].textContent;
+		if ( result == rightAnswer) {
 			playerScoreNumber = parseInt(playerScoreCurrent) + point;
 			playerScore.textContent = playerScoreNumber;
 			cells[i].classList.add("wasted__green");
+			alert('Right Answer');
 		} else {
 			playerScoreNumber = parseInt(playerScoreCurrent) - point;
 			playerScore.textContent = playerScoreNumber;
 			cells[i].classList.add("wasted__red");
+			alert('Wrong. Right answer: ' + rightAnswer + '.');
 		}
 		var arrCells = Object.values(cells);
 		var wastedArr = arrCells.filter(function(item) {
