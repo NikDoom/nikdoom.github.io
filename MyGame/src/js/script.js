@@ -1,4 +1,4 @@
-var themes = [theme1.title, theme2.title, theme3.title, theme4.title, theme5.title, theme6.title];
+var themes = [theme1, theme2, theme3, theme4, theme5, theme6];
 
 function compareRandom(a, b) {
   return Math.random() - 0.5;
@@ -6,21 +6,31 @@ function compareRandom(a, b) {
 
 themes.sort(compareRandom);
 
-
 let titles = document.getElementsByClassName('game-item_title');
-let row = document.getElementsByClassName('game-row');
-let cell = document.getElementsByClassName('game-item_cell');
+let rows = document.getElementsByClassName('game-row');
+let cells = document.getElementsByClassName('game-item_cell');
 let playerScore = document.getElementById('playerScore');
+var rowCells = [];
 
-for (var i = 0; i < titles.length; i++) {
-	titles[i].textContent = themes[i];
+for (let i = 0; i < titles.length; i++) {
+	titles[i].textContent = themes[i].title;
+	rowCells[i] = rows[i].cells;
+	for (let k = 1; k < rowCells[i].length; k++) {
+		var span = document.createElement('span');
+		span.className = "hiden-quest";
+		var a = rowCells[i][k];
+		a.appendChild(span);
+		span.textContent = themes[i].quest[k-1];
+	}
 }
 
-for (var i = 0; i < cell.length; i++) {
-	cell[i].onclick = function() {
+console.log(rowCells);
+
+for (let i = 0; i < cells.length; i++) {
+	cells[i].onclick = function() {
 		let point = this.textContent;
 		point = parseInt(point);
-		let result = prompt();
+		let result = prompt(this.getElementsByClassName('hiden-quest')[0].textContent);
 		if (true) {
 			let playerScoreCurrent = playerScore.textContent;
 			let playerScoreNumber = parseInt(playerScoreCurrent) + point;

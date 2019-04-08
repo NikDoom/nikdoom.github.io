@@ -7,7 +7,7 @@
 .name-form {
   padding: 80px 40px;
   text-align: center;
-  height: 70px;
+  height: 60px;
 }
 
 .name-form_input {
@@ -32,6 +32,10 @@
   width: 100%;
   max-width: 1280px;
   display: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .title {
@@ -55,6 +59,10 @@
   font-weight: bold;
   width: 100%;
   margin-bottom: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .game-item {
@@ -97,4 +105,8 @@
 
 .player p {
   margin: 0;
+}
+
+.hiden-quest {
+  display: none;
 }

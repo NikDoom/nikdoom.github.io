@@ -7,7 +7,7 @@
 	&-form {
 		padding: 80px 40px;
 		text-align: center;
-		height: 70px;
+		height: 60px;
 		&_input {
 			height: 100%;
 			outline: none;
@@ -28,6 +28,7 @@
 	width: 100%;
 	max-width: 1280px;
 	display: none;
+	user-select: none;
 }
 .title {
 	text-align: center;
@@ -45,6 +46,7 @@
 	font-weight: bold;
 	width: 100%;
 	margin-bottom: 20px;
+	user-select: none;
 	&-item {
 		box-sizing: border-box;
 		border: 3px solid #fff;
@@ -72,4 +74,7 @@
 	p {
 		margin: 0;
 	}
+}
+.hiden-quest {
+	display: none;
 }
