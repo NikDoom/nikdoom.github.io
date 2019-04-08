@@ -28,6 +28,14 @@ for (let i = 0; i < titles.length; i++) {
 	}
 }
 
+function getFinal() {
+	let playerNameText = playerName.textContent;
+	let playerScoreText = playerScore.textContent;
+	wrap.style.display = "none";
+	final.style.display = "flex";
+	finalTitle.textContent = 'Game over. ' + playerNameText + ', your final score is ' + playerScoreText;
+}
+
 for (let i = 0; i < cells.length; i++) {
 	cells[i].onclick = function() {
 		let point = this.textContent;
@@ -52,6 +60,7 @@ for (let i = 0; i < cells.length; i++) {
 		function endGame() {
 			if (wastedArr.length == arrCells.length) {
 				console.log('endGame');
+				getFinal();
 			}
 		}
 		endGame();

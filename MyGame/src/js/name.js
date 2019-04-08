@@ -4,6 +4,8 @@ var playerName = document.getElementById("playerName");
 var nameWrap = document.getElementById("nameWrap");
 var wrap = document.getElementById("wrap");
 var lo = document.getElementById("lo");
+var final = document.getElementById('final');
+var finalTitle = document.getElementById('finalTitle');
 
 nameForm.onsubmit = function() {
 	let nameValue = nameInput.value;
