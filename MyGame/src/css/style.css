@@ -107,6 +107,20 @@
   margin: 0;
 }
 
-.hiden-quest {
+.hiden-quest,
+.hiden-answer {
   display: none;
+}
+
+.wasted {
+  pointer-events: none;
+  color: transparent;
+}
+
+.wasted__green {
+  background-color: #006400;
+}
+
+.wasted__red {
+  background-color: #8b0000;
 }

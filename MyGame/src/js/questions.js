@@ -37,6 +37,6 @@ let theme6 = {
 	title: "theme6Title",
 	quest: ["theme6Quest1", "theme6Quest2", "theme6Quest3",
 	"theme6Quest4", "theme6Quest5"],
-	answer: ["theme5Answer1", "theme5Answer2", "theme5Answer3",
-	"theme5Answer4", "theme5Answer5"]
+	answer: ["theme6Answer1", "theme6Answer2", "theme6Answer3",
+	"theme6Answer4", "theme6Answer5"]
 };

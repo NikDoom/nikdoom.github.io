@@ -18,23 +18,44 @@ for (let i = 0; i < titles.length; i++) {
 	for (let k = 1; k < rowCells[i].length; k++) {
 		var span = document.createElement('span');
 		span.className = "hiden-quest";
+		var answerHide = document.createElement('i');
+		answerHide.className = 'hiden-answer';
 		var a = rowCells[i][k];
 		a.appendChild(span);
+		a.appendChild(answerHide);
 		span.textContent = themes[i].quest[k-1];
+		answerHide.textContent = themes[i].answer[k-1];
 	}
 }
-
-console.log(rowCells);
 
 for (let i = 0; i < cells.length; i++) {
 	cells[i].onclick = function() {
 		let point = this.textContent;
 		point = parseInt(point);
+		let playerScoreNumber;
+		let playerScoreCurrent = playerScore.textContent;
 		let result = prompt(this.getElementsByClassName('hiden-quest')[0].textContent);
-		if (true) {
-			let playerScoreCurrent = playerScore.textContent;
-			let playerScoreNumber = parseInt(playerScoreCurrent) + point;
+		cells[i].classList.add("wasted");
+		if ( result == this.getElementsByClassName('hiden-answer')[0].textContent) {
+			playerScoreNumber = parseInt(playerScoreCurrent) + point;
 			playerScore.textContent = playerScoreNumber;
+			cells[i].classList.add("wasted__green");
+		} else {
+			playerScoreNumber = parseInt(playerScoreCurrent) - point;
+			playerScore.textContent = playerScoreNumber;
+			cells[i].classList.add("wasted__red");
 		}
+		let isPositive = function() {
+  			return currentValue.classList.contains('wasted');
+		}
+		console.log(isPositive);
+		var positiveArr = cells.every(isPositive);
+		console.log(positiveArr);
 	}
+}
+
+var endGame = function() {
+	if (positiveArr) {
+
+	} 
 }

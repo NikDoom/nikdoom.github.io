@@ -75,6 +75,16 @@
 		margin: 0;
 	}
 }
-.hiden-quest {
+.hiden-quest, .hiden-answer {
 	display: none;
+}
+.wasted {
+	pointer-events: none;
+	color: transparent;
+	&__green {
+		background-color: #006400;
+	}
+	&__red {
+		background-color: #8b0000;
+	}
 }
