@@ -45,17 +45,15 @@ for (let i = 0; i < cells.length; i++) {
 			playerScore.textContent = playerScoreNumber;
 			cells[i].classList.add("wasted__red");
 		}
-		let isPositive = function() {
-  			return currentValue.classList.contains('wasted');
+		var arrCells = Object.values(cells);
+		var wastedArr = arrCells.filter(function(item) {
+			return item.classList.contains('wasted');
+		});
+		function endGame() {
+			if (wastedArr.length == arrCells.length) {
+				console.log('endGame');
+			}
 		}
-		console.log(isPositive);
-		var positiveArr = cells.every(isPositive);
-		console.log(positiveArr);
+		endGame();
 	}
-}
-
-var endGame = function() {
-	if (positiveArr) {
-
-	} 
 }
